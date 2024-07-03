@@ -16,6 +16,14 @@ body {
   /* overflow: visible; */
 }
 
+.hide {
+  display: none;
+}
+
+.highlight {
+  color: blue;
+}
+
 h1,
 h2,
 h3,
@@ -141,10 +149,6 @@ nav {
 
   .about-me {
     margin-block: 50px;
-
-    .highlight {
-      color: blue;
-    }
   }
 
   .my-skills {
@@ -254,7 +258,7 @@ nav {
 
       a {
         text-decoration: none;
-        color: #d1d1d1;
+        /* color: #d1d1d1; */
       }
     }
   }
@@ -287,13 +291,11 @@ a {
   body {
     margin: 0;
     padding: 0;
-    max-width: 768px;
+    max-width: 786x;
   }
   nav {
     height: 50px;
     line-height: 25%;
-
-    /* flex-direction: row-reverse; */
 
     .container {
       width: 100%;
@@ -304,7 +306,6 @@ a {
 
       .drop-down {
         display: block;
-        /* flex-direction: column; */
         width: 100px;
         height: 100px;
         background-color: #fff;
@@ -312,11 +313,10 @@ a {
         position: absolute;
         top: 50px;
         right: 50px;
-        /* bottom: 300px; */
-        /* bottom: 0; */
+        z-index: 1000;
         a {
           color: #202020;
-          display: inline-block;
+          display: block;
         }
       }
 
@@ -343,7 +343,7 @@ a {
       justify-content: center;
       .content {
         margin: auto;
-        max-width: 100%;
+        width: 100%;
         text-align: center;
         padding-block: 30px;
       }
@@ -360,7 +360,7 @@ a {
 
   #about {
     .about-me {
-      max-width: 80%;
+      width: 80%;
       margin-block: 20px;
     }
 
@@ -387,10 +387,10 @@ a {
         flex-direction: column;
 
         form {
-          max-width: 100%;
+          width: 100%;
           input,
           textarea {
-            max-width: 400px;
+            width: 400px;
           }
         }
         .info {
@@ -412,7 +412,7 @@ a {
     height: 70px;
     flex-direction: column-reverse;
     .social-icons {
-      max-width: 30%;
+      width: 50%;
     }
   }
 }
