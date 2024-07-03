@@ -45,7 +45,7 @@ nav {
     .nav-links {
       display: flex;
       justify-content: space-around;
-      width: 30%;
+      width: 40%;
     }
 
     .nav-links li a {
@@ -283,7 +283,7 @@ a {
   color: inherit;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 786px) {
   body {
     margin: 0;
     padding: 0;
