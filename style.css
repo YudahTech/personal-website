@@ -20,6 +20,12 @@ body {
   display: none;
 }
 
+a {
+  color: #202020;
+  text-decoration: none;
+  display: block;
+}
+
 .highlight {
   color: blue;
 }
@@ -93,11 +99,9 @@ nav {
     }
   }
 
-  /* .dropdown-menu { */
   ul {
     list-style-type: none;
   }
-  /* } */
 }
 
 #home {
@@ -117,7 +121,7 @@ nav {
       margin-left: 35px;
     }
 
-    button {
+    .download-button {
       border-radius: 20px;
       background-color: #fff;
       height: 30px;
@@ -305,7 +309,7 @@ a {
       }
 
       .drop-down {
-        display: block;
+        /* display: block; */
         width: 100px;
         height: 100px;
         background-color: #fff;
@@ -324,6 +328,10 @@ a {
         display: block;
         height: 45px;
         margin-top: 5px;
+
+        .fa-xmark {
+          display: none;
+        }
       }
 
       .hide {
@@ -388,9 +396,11 @@ a {
 
         form {
           width: 100%;
+          flex-direction: column;
           input,
           textarea {
             width: 400px;
+            background-color: #202020;
           }
         }
         .info {
