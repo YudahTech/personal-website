@@ -283,11 +283,11 @@ a {
   color: inherit;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   body {
     margin: 0;
     padding: 0;
-    max-width: 480px;
+    max-width: 768px;
   }
   nav {
     height: 50px;
@@ -305,7 +305,7 @@ a {
       .drop-down {
         display: block;
         /* flex-direction: column; */
-        max-width: 80px;
+        width: 100px;
         height: 100px;
         background-color: #fff;
         padding-inline: 30px;
