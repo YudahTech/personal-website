@@ -20,12 +20,6 @@ body {
   display: none;
 }
 
-a {
-  color: #202020;
-  text-decoration: none;
-  display: block;
-}
-
 .highlight {
   color: blue;
 }
@@ -99,9 +93,11 @@ nav {
     }
   }
 
+  /* .dropdown-menu { */
   ul {
     list-style-type: none;
   }
+  /* } */
 }
 
 #home {
@@ -121,7 +117,7 @@ nav {
       margin-left: 35px;
     }
 
-    .download-button {
+    button {
       border-radius: 20px;
       background-color: #fff;
       height: 30px;
@@ -309,7 +305,7 @@ a {
       }
 
       .drop-down {
-        /* display: block; */
+        display: block;
         width: 100px;
         height: 100px;
         background-color: #fff;
@@ -328,10 +324,6 @@ a {
         display: block;
         height: 45px;
         margin-top: 5px;
-
-        .fa-xmark {
-          display: none;
-        }
       }
 
       .hide {
@@ -387,24 +379,23 @@ a {
   }
 
   #contact {
-    max-width: 100%;
+    width: 100%;
     .container {
-      width: 90%;
+      width: 100%;
       .form-container {
         display: flex;
         flex-direction: column;
 
         form {
-          width: 100%;
-          flex-direction: column;
+          width: 80%;
+
           input,
           textarea {
-            width: 400px;
-            background-color: #202020;
+            width: 350px;
           }
         }
         .info {
-          width: 100%;
+          width: 80%;
 
           hr {
             width: 100%;
