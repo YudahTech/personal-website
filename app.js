@@ -4,6 +4,7 @@ const day = document.getElementById("day-of-week");
 const barsBtn = document.querySelector(".fa-bars");
 const cancelBtn = document.querySelector(".fa-xmark");
 const dropdownContent = document.querySelector(".drop-down");
+const menuToggle = document.querySelector(".menu-toggle");
 
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", function () {
@@ -34,31 +35,28 @@ updateUTCTime();
 setInterval(updateUTCTime, 1000);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const barsBtn = document.querySelector(".fa-bars");
-  const cancelBtn = document.querySelector(".fa-xmark");
-  const dropdownContent = document.querySelector(".drop-down");
-
-  barsBtn.addEventListener("click", function () {
-    dropdownContent.style.display = "block";
-    cancelBtn.style.display = "inline";
-    barsBtn.style.display = "none";
+  // Show dropdown when hamburger clicked
+  menuToggle.addEventListener("click", function (event) {
+    event.stopPropagation(); // prevent the click from bubbling up
+    dropdownContent.classList.toggle("show");
+    menuToggle.classList.toggle("open");
   });
 
-  cancelBtn.addEventListener("click", function () {
-    dropdownContent.style.display = "none";
-    barsBtn.style.display = "inline";
-    cancelBtn.style.display = "none";
-  });
-
-  // Close the dropdown if the user clicks outside of it
+  // Hide dropdown if user clicks outside
   window.addEventListener("click", function (event) {
     if (
-      !event.target.matches(".fa-bars") &&
-      !event.target.matches(".fa-xmark")
+      !event.target.closest(".menu-toggle") &&
+      !event.target.closest(".drop-down")
     ) {
-      dropdownContent.style.display = "none";
-      barsBtn.style.display = "inline";
-      cancelBtn.style.display = "none";
+      dropdownContent.classList.remove("show");
+      menuToggle.classList.remove("open");
     }
+  });
+
+  // Also handle individual close when xmark clicked
+  cancelBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+    dropdownContent.classList.remove("show");
+    menuToggle.classList.remove("open");
   });
 });
